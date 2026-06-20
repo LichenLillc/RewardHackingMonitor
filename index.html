@@ -3,518 +3,500 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-  <!-- Primary Meta Tags -->
-  <!-- TODO: Replace with your paper title and author names -->
-  <meta name="title" content="PAPER_TITLE - AUTHOR_NAMES">
-  <!-- TODO: Write a compelling 150-160 character description of your research -->
-  <meta name="description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-  <!-- TODO: Add 5-10 relevant keywords for your research area -->
-  <meta name="keywords" content="KEYWORD1, KEYWORD2, KEYWORD3, machine learning, computer vision, AI">
-  <!-- TODO: List all authors -->
-  <meta name="author" content="FIRST_AUTHOR_NAME, SECOND_AUTHOR_NAME">
+
+  <meta name="title" content="Do Prompt-Elicited Trajectories Reflect Training-Time Reward Hacking?">
+  <meta name="description" content="A systematic study of whether prompt-elicited reward-hacking trajectories reliably train and evaluate monitors for training-time reward hacking in code generation.">
+  <meta name="keywords" content="reward hacking, monitoring, chain-of-thought monitoring, reinforcement learning, code generation, prompt-elicited data, training-time reward hacking">
+  <meta name="author" content="Lichen Li, Hengguang Zhou, Yijun Liang, Tianyi Zhou, Cho-Jui Hsieh">
   <meta name="robots" content="index, follow">
   <meta name="language" content="English">
-  
-  <!-- Open Graph / Facebook -->
+
   <meta property="og:type" content="article">
-  <!-- TODO: Replace with your institution or lab name -->
-  <meta property="og:site_name" content="INSTITUTION_OR_LAB_NAME">
-  <!-- TODO: Same as paper title above -->
-  <meta property="og:title" content="PAPER_TITLE">
-  <!-- TODO: Same as description above -->
-  <meta property="og:description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-  <!-- TODO: Replace with your actual website URL -->
-  <meta property="og:url" content="https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE">
-  <!-- TODO: Create a 1200x630px preview image and update path -->
-  <meta property="og:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
+  <meta property="og:site_name" content="Reward Hacking Monitor">
+  <meta property="og:title" content="Do Prompt-Elicited Trajectories Reflect Training-Time Reward Hacking?">
+  <meta property="og:description" content="Prompt-elicited reward-hacking data can make monitors look effective while failing on reward hacks that emerge during RL training.">
+  <meta property="og:url" content="https://lichenlillc.github.io/RewardHackingMonitor/">
+  <meta property="og:image" content="https://lichenlillc.github.io/RewardHackingMonitor/static/images/framework.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="PAPER_TITLE - Research Preview">
-  <meta property="article:published_time" content="2024-01-01T00:00:00.000Z">
-  <meta property="article:author" content="FIRST_AUTHOR_NAME">
+  <meta property="og:image:alt" content="Trace-and-Amplify framework overview">
+  <meta property="article:published_time" content="2026-06-20T00:00:00.000Z">
+  <meta property="article:author" content="Lichen Li">
   <meta property="article:section" content="Research">
-  <meta property="article:tag" content="KEYWORD1">
-  <meta property="article:tag" content="KEYWORD2">
+  <meta property="article:tag" content="Reward Hacking">
+  <meta property="article:tag" content="Monitoring">
 
-  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
-  <!-- TODO: Replace with your lab/institution Twitter handle -->
-  <meta name="twitter:site" content="@YOUR_TWITTER_HANDLE">
-  <!-- TODO: Replace with first author's Twitter handle -->
-  <meta name="twitter:creator" content="@AUTHOR_TWITTER_HANDLE">
-  <!-- TODO: Same as paper title above -->
-  <meta name="twitter:title" content="PAPER_TITLE">
-  <!-- TODO: Same as description above -->
-  <meta name="twitter:description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-  <!-- TODO: Same as social preview image above -->
-  <meta name="twitter:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
-  <meta name="twitter:image:alt" content="PAPER_TITLE - Research Preview">
+  <meta name="twitter:title" content="Do Prompt-Elicited Trajectories Reflect Training-Time Reward Hacking?">
+  <meta name="twitter:description" content="A systematic study of prompt-elicited vs. training-time reward-hacking trajectories for monitor training and evaluation.">
+  <meta name="twitter:image" content="https://lichenlillc.github.io/RewardHackingMonitor/static/images/framework.png">
+  <meta name="twitter:image:alt" content="Trace-and-Amplify framework overview">
 
-  <!-- Academic/Research Specific -->
-  <meta name="citation_title" content="PAPER_TITLE">
-  <meta name="citation_author" content="FIRST_AUTHOR_LAST, FIRST_AUTHOR_FIRST">
-  <meta name="citation_author" content="SECOND_AUTHOR_LAST, SECOND_AUTHOR_FIRST">
-  <meta name="citation_publication_date" content="2024">
-  <meta name="citation_conference_title" content="CONFERENCE_NAME">
-  <meta name="citation_pdf_url" content="https://YOUR_DOMAIN.com/static/pdfs/paper.pdf">
-  
-  <!-- Additional SEO -->
+  <meta name="citation_title" content="Do Prompt-Elicited Trajectories Reflect Training-Time Reward Hacking? A Systematic Study on Monitoring Trainig-Time Reward Hacking in Code Generation">
+  <meta name="citation_author" content="Li, Lichen">
+  <meta name="citation_author" content="Zhou, Hengguang">
+  <meta name="citation_author" content="Liang, Yijun">
+  <meta name="citation_author" content="Zhou, Tianyi">
+  <meta name="citation_author" content="Hsieh, Cho-Jui">
+  <meta name="citation_publication_date" content="2026">
+  <meta name="citation_conference_title" content="Preprint">
+  <meta name="citation_pdf_url" content="https://lichenlillc.github.io/RewardHackingMonitor/static/pdfs/rhmonitor-paper.pdf">
+
   <meta name="theme-color" content="#2563eb">
   <meta name="msapplication-TileColor" content="#2563eb">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
-  
-  <!-- Preconnect for performance -->
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://ajax.googleapis.com">
-  <link rel="preconnect" href="https://documentcloud.adobe.com">
   <link rel="preconnect" href="https://cdn.jsdelivr.net">
 
+  <title>Do Prompt-Elicited Trajectories Reflect Training-Time Reward Hacking?</title>
 
-  <!-- TODO: Replace with your paper title and authors -->
-  <title>PAPER_TITLE - AUTHOR_NAMES | Academic Research</title>
-  
-  <!-- Favicon and App Icons -->
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
   <link rel="apple-touch-icon" href="static/images/favicon.ico">
-  
-  <!-- Critical CSS - Load synchronously -->
+
   <link rel="stylesheet" href="static/css/bulma.min.css">
   <link rel="stylesheet" href="static/css/index.css">
-  
-  <!-- Non-critical CSS - Load asynchronously -->
-  <link rel="preload" href="static/css/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="static/css/bulma-slider.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <link rel="preload" href="static/css/fontawesome.all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  
-  <!-- Fallback for browsers that don't support preload -->
   <noscript>
-    <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
-    <link rel="stylesheet" href="static/css/bulma-slider.min.css">
     <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   </noscript>
-  
-  <!-- Fonts - Optimized loading -->
+
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  
-  <!-- Defer non-critical JavaScript -->
+
   <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script defer src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
   <script defer src="static/js/fontawesome.all.min.js"></script>
-  <script defer src="static/js/bulma-carousel.min.js"></script>
-  <script defer src="static/js/bulma-slider.min.js"></script>
   <script defer src="static/js/index.js"></script>
-  
-  <!-- Structured Data for Academic Papers -->
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "ScholarlyArticle",
-    "headline": "PAPER_TITLE",
-    "description": "BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS",
+    "headline": "Do Prompt-Elicited Trajectories Reflect Training-Time Reward Hacking? A Systematic Study on Monitoring Trainig-Time Reward Hacking in Code Generation",
+    "description": "A systematic study of whether prompt-elicited reward-hacking trajectories reliably train and evaluate monitors for training-time reward hacking in code generation.",
     "author": [
-      {
-        "@type": "Person",
-        "name": "FIRST_AUTHOR_NAME",
-        "affiliation": {
-          "@type": "Organization",
-          "name": "INSTITUTION_NAME"
-        }
-      },
-      {
-        "@type": "Person",
-        "name": "SECOND_AUTHOR_NAME",
-        "affiliation": {
-          "@type": "Organization",
-          "name": "INSTITUTION_NAME"
-        }
-      }
+      {"@type": "Person", "name": "Lichen Li", "affiliation": {"@type": "Organization", "name": "Peking University"}},
+      {"@type": "Person", "name": "Hengguang Zhou", "affiliation": {"@type": "Organization", "name": "University of California, Los Angeles"}},
+      {"@type": "Person", "name": "Yijun Liang", "affiliation": {"@type": "Organization", "name": "University of Maryland"}},
+      {"@type": "Person", "name": "Tianyi Zhou", "affiliation": {"@type": "Organization", "name": "Mohamed bin Zayed University of Artificial Intelligence"}},
+      {"@type": "Person", "name": "Cho-Jui Hsieh", "affiliation": {"@type": "Organization", "name": "University of California, Los Angeles"}}
     ],
-    "datePublished": "2024-01-01",
-    "publisher": {
-      "@type": "Organization",
-      "name": "CONFERENCE_OR_JOURNAL_NAME"
-    },
-    "url": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE",
-    "image": "https://YOUR_DOMAIN.com/static/images/social_preview.png",
-    "keywords": ["KEYWORD1", "KEYWORD2", "KEYWORD3", "machine learning", "computer vision"],
-    "abstract": "FULL_ABSTRACT_TEXT_HERE",
-    "citation": "BIBTEX_CITATION_HERE",
+    "datePublished": "2026-06-20",
+    "publisher": {"@type": "Organization", "name": "Preprint"},
+    "url": "https://lichenlillc.github.io/RewardHackingMonitor/",
+    "image": "https://lichenlillc.github.io/RewardHackingMonitor/static/images/framework.png",
+    "keywords": ["reward hacking", "monitoring", "code generation", "reinforcement learning", "prompt-elicited trajectories", "training-time reward hacking"],
+    "abstract": "Reward hacking in code generation poses a critical challenge for reinforcement learning and reasoning model deployment. This work studies whether monitors trained on prompt-elicited hacking trajectories can detect reward hacks that arise during RL training without explicit hacking instructions.",
     "isAccessibleForFree": true,
-    "license": "https://creativecommons.org/licenses/by/4.0/",
-    "mainEntity": {
-      "@type": "WebPage",
-      "@id": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE"
-    },
-    "about": [
-      {
-        "@type": "Thing",
-        "name": "RESEARCH_AREA_1"
-      },
-      {
-        "@type": "Thing", 
-        "name": "RESEARCH_AREA_2"
-      }
-    ]
-  }
-  </script>
-  
-  <!-- Website/Organization Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "INSTITUTION_OR_LAB_NAME",
-    "url": "https://YOUR_INSTITUTION_WEBSITE.com",
-    "logo": "https://YOUR_DOMAIN.com/static/images/favicon.ico",
-    "sameAs": [
-      "https://twitter.com/YOUR_TWITTER_HANDLE",
-      "https://github.com/YOUR_GITHUB_USERNAME"
-    ]
+    "mainEntity": {"@type": "WebPage", "@id": "https://lichenlillc.github.io/RewardHackingMonitor/"}
   }
   </script>
 </head>
 <body>
-
-
-  <!-- Scroll to Top Button -->
   <button class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top">
     <i class="fas fa-chevron-up"></i>
   </button>
 
-  <!-- More Works Dropdown -->
-  <div class="more-works-container">
-    <button class="more-works-btn" onclick="toggleMoreWorks()" title="View More Works from Our Lab">
-      <i class="fas fa-flask"></i>
-      More Works
-      <i class="fas fa-chevron-down dropdown-arrow"></i>
-    </button>
-    <div class="more-works-dropdown" id="moreWorksDropdown">
-      <div class="dropdown-header">
-        <h4>More Works from Our Lab</h4>
-        <button class="close-btn" onclick="toggleMoreWorks()">
-          <i class="fas fa-times"></i>
-        </button>
-      </div>
-      <div class="works-list">
-        <!-- TODO: Replace with your lab's related works -->
-        <a href="https://arxiv.org/abs/PAPER_ID_1" class="work-item" target="_blank">
-          <div class="work-info">
-            <!-- TODO: Replace with actual paper title -->
-            <h5>Paper Title 1</h5>
-            <!-- TODO: Replace with brief description -->
-            <p>Brief description of the work and its main contribution.</p>
-            <!-- TODO: Replace with venue and year -->
-            <span class="work-venue">Conference/Journal 2024</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-        <!-- TODO: Add more related works or remove extra items -->
-        <a href="https://arxiv.org/abs/PAPER_ID_2" class="work-item" target="_blank">
-          <div class="work-info">
-            <h5>Paper Title 2</h5>
-            <p>Brief description of the work and its main contribution.</p>
-            <span class="work-venue">Conference/Journal 2023</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-        <a href="https://arxiv.org/abs/PAPER_ID_3" class="work-item" target="_blank">
-          <div class="work-info">
-            <h5>Paper Title 3</h5>
-            <p>Brief description of the work and its main contribution.</p>
-            <span class="work-venue">Conference/Journal 2023</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-      </div>
-    </div>
-  </div>
-
   <main id="main-content">
-  <section class="hero">
-    <div class="hero-body">
-      <div class="container is-max-desktop">
-        <div class="columns is-centered">
-          <div class="column has-text-centered">
-            <!-- TODO: Replace with your paper title -->
-            <h1 class="title is-1 publication-title">Academic Project Page</h1>
-            <div class="is-size-5 publication-authors">
-              <!-- TODO: Replace with your paper authors and their personal links -->
-              <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
-                <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
-                  <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
-                  </span>
-                  </div>
+    <section class="hero publication-header">
+      <div class="hero-body">
+        <div class="container is-max-desktop">
+          <div class="columns is-centered">
+            <div class="column has-text-centered">
+              <h1 class="title is-1 publication-title">Do Prompt-Elicited Trajectories Reflect Training-Time Reward Hacking? A Systematic Study on Monitoring Trainig-Time Reward Hacking in Code Generation</h1>
 
-                  <div class="is-size-5 publication-authors">
-                    <!-- TODO: Replace with your institution and conference/journal info -->
-                    <span class="author-block">Institution Name<br>Conference name and year</span>
-                    <!-- TODO: Remove this line if no equal contribution -->
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
-                  </div>
+              <div class="is-size-5 publication-authors">
+                <span class="author-block"><a href="https://lichenlillc.github.io/" target="_blank" rel="noopener">Lichen Li</a><sup><a href="#affiliation-1">1</a></sup>,</span>
+                <span class="author-block"><a href="https://hengguangzhou.github.io/" target="_blank" rel="noopener">Hengguang Zhou</a><sup><a href="#affiliation-2">2</a></sup>,</span>
+                <span class="author-block"><a href="https://joliang17.github.io/" target="_blank" rel="noopener">Yijun Liang</a><sup><a href="#affiliation-4">4</a></sup>,</span>
+                <span class="author-block"><a href="https://tianyizhou.github.io/" target="_blank" rel="noopener">Tianyi Zhou</a><sup><a href="#affiliation-5">5</a></sup>,</span>
+                <span class="author-block"><a href="https://web.cs.ucla.edu/~chohsieh/" target="_blank" rel="noopener">Cho-Jui Hsieh</a><sup><a href="#affiliation-2">2</a>,<a href="#affiliation-3">3</a></sup></span>
+              </div>
 
-                  <div class="column has-text-centered">
-                    <div class="publication-links">
-                         <!-- TODO: Update with your arXiv paper ID -->
-                      <span class="link-block">
-                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
-                        class="external-link button is-normal is-rounded is-dark">
-                        <span class="icon">
-                          <i class="fas fa-file-pdf"></i>
-                        </span>
-                        <span>Paper</span>
-                      </a>
-                    </span>
+              <div class="is-size-5 publication-authors">
+                <span class="author-block" id="affiliation-1"><sup>1</sup>Peking University</span>
+                <span class="author-block" id="affiliation-2"><sup>2</sup>University of California, Los Angeles</span>
+                <br>
+                <span class="author-block" id="affiliation-3"><sup>3</sup>Arena</span>
+                <span class="author-block" id="affiliation-4"><sup>4</sup>University of Maryland</span>
+                <span class="author-block" id="affiliation-5"><sup>5</sup>MBZUAI</span>
+              </div>
 
-                    <!-- TODO: Add your supplementary material PDF or remove this section -->
-                    <span class="link-block">
-                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
-                      </span>
-                      <span>Supplementary</span>
-                    </a>
-                  </span>
-
-                  <!-- TODO: Replace with your GitHub repository URL -->
-                  <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
+              <div class="publication-links">
+                <span class="link-block">
+                  <a href="static/pdfs/rhmonitor-paper.pdf" target="_blank" rel="noopener" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="https://anonymous.4open.science/r/CoTMonitoring-6606/" target="_blank" rel="noopener" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="fab fa-github"></i></span>
                     <span>Code</span>
                   </a>
                 </span>
-
-                <!-- TODO: Update with your arXiv paper ID -->
-                <span class="link-block">
-                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-              </span>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-
-<!-- Teaser video-->
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <!-- TODO: Replace with your teaser video -->
-      <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata">
-        <!-- TODO: Add your video file path here -->
-        <source src="static/videos/banner_video.mp4" type="video/mp4">
-      </video>
-      <!-- TODO: Replace with your video description -->
-      <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
-      </h2>
-    </div>
-  </div>
-</section>
-<!-- End teaser video -->
-
-<!-- Paper abstract -->
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <!-- TODO: Replace with your paper abstract -->
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
-          </p>
+    <section class="section hero is-light">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Abstract</h2>
+            <p class="subtitle is-5 has-text-grey rhm-tldr">
+              Existing reward-hacking monitors are often trained or evaluated on prompt-elicited hacking trajectories. But do those trajectories actually reflect reward hacks that emerge during RL training? <strong>Our evidence suggests: probably no.</strong>
+            </p>
+            <div class="rhm-badges">
+              <span class="rhm-pill">Prompt-Elicited vs. Training-Time</span>
+              <span class="rhm-pill">Reward Hacking Monitors</span>
+              <span class="rhm-pill">Code Generation</span>
+              <span class="rhm-pill">No Hacking Instructions</span>
+            </div>
+            <div class="content has-text-justified">
+              <p>
+                Reward hacking in code generation, where models exploit evaluation loopholes to obtain high reward without correctly solving the intended task, poses a critical challenge for Reinforcement Learning (RL) and the deployment of reasoning models. Existing studies often rely on explicitly prompted hacking trajectories, but it remains unclear whether monitors trained on such data can detect reward hacks that arise without direct hacking instructions during RL training. In this work, we introduce Trace-and-Amplify, a framework for scalable curation of reward-hacking trajectories that arise during RL training without explicit hacking instructions. The framework uses unit-test tracers to identify hacking solutions when they occur and retains such trajectories for monitor training and evaluation. Through controlled comparisons between monitors trained on prompt-elicited hacking trajectories and training-time reward-hacking trajectories collected by Trace-and-Amplify, we find that (1) prompt-elicited-data-trained monitors often fail to generalize to trajectories curated by our framework, and (2) monitors trained on our Trace-and-Amplify trajectories demonstrate stronger generalizability to unseen hacking types. Our results indicate that prompted reward hacking data may not fully reflect training-time reward-hacking behaviors, and that relying solely on these data can lead to misleading conclusions.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
-<!-- End paper abstract -->
+    </section>
 
+    <section class="section">
+      <div class="container is-max-desktop">
+        <div class="has-text-centered">
+          <h2 class="title is-3">Curating Training-Time Reward Hacks</h2>
+          <p class="subtitle is-5 has-text-grey">
+            Trace-and-Amplify gives us a way to collect reward-hacking trajectories that arise during RL training, without directly asking the model to hack.
+          </p>
+        </div>
 
-<!-- Image carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- TODO: Replace with your research result images -->
-        <img src="static/images/carousel1.jpg" alt="First research result visualization" loading="lazy"/>
-        <!-- TODO: Replace with description of this result -->
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
+        <figure class="image rhm-figure">
+          <img src="static/images/framework.png" alt="Overview of the Trace-and-Amplify data curation framework" loading="lazy">
+        </figure>
+
+        <div class="rhm-steps">
+          <div class="rhm-step">
+            <span class="rhm-badge badge-blue">1</span>
+            <span><strong>Construct a trap.</strong> Add a conflicting unit test so ordinary task completion cannot satisfy the full test suite.</span>
+          </div>
+          <div class="rhm-step">
+            <span class="rhm-badge badge-amber">2</span>
+            <span><strong>Trace evaluator exploits.</strong> Any solution that passes the contradictory tests is identified as exploiting the evaluation process.</span>
+          </div>
+          <div class="rhm-step">
+            <span class="rhm-badge badge-green">3</span>
+            <span><strong>Amplify rare events.</strong> Resample candidate groups until a hacking trajectory appears, then retain those groups for monitor training and evaluation.</span>
+          </div>
+        </div>
+
+        <p class="rhm-note">
+          <strong>Why this matters:</strong> the goal is not to make hacking easier for its own sake. The goal is to create a controlled, scalable source of training-time reward-hacking trajectories that better reflects behavior emerging under reward optimization than trajectories produced by explicit hacking prompts.
+        </p>
       </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="Second research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
+    </section>
+
+    <section class="section hero is-light">
+      <div class="container is-max-desktop">
+        <div class="has-text-centered">
+          <h2 class="title is-3">Evaluating Monitor Generalization</h2>
+          <p class="subtitle is-5 has-text-grey">
+            We test whether monitors trained on one source of hacking trajectories transfer to the other.
+          </p>
+        </div>
+
+        <div class="rhm-dims">
+          <div class="rhm-dim dim-pe">
+            <div class="rhm-dim-tag">PE -> TT</div>
+            <div class="rhm-dim-name">Prompted to Training-Time</div>
+            <div class="rhm-dim-desc">Train monitors on explicit hacking prompts, then test whether they detect reward hacks collected during RL training.</div>
+          </div>
+          <div class="rhm-dim dim-tt">
+            <div class="rhm-dim-tag">TT -> PE</div>
+            <div class="rhm-dim-name">Training-Time to Prompted</div>
+            <div class="rhm-dim-desc">Train monitors on Trace-and-Amplify trajectories and evaluate transfer back to prompt-elicited hacks.</div>
+          </div>
+          <div class="rhm-dim dim-ood">
+            <div class="rhm-dim-tag">OOD</div>
+            <div class="rhm-dim-name">Unseen Hacking Types</div>
+            <div class="rhm-dim-desc">Hold out a training-time hacking strategy to test whether monitors generalize beyond observed exploit types.</div>
+          </div>
+          <div class="rhm-dim dim-model">
+            <div class="rhm-dim-tag">Models</div>
+            <div class="rhm-dim-name">Model-Family Consistency</div>
+            <div class="rhm-dim-desc">Repeat the study across Qwen2.5-Coder and DeepSeek-Coder trajectories.</div>
+          </div>
+        </div>
       </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="Third research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="Fourth research result visualization" loading="lazy"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
-    </div>
-  </div>
-</div>
-</div>
-</section>
-<!-- End image carousel -->
+    </section>
 
+    <section class="section">
+      <div class="container is-max-desktop">
+        <div class="has-text-centered">
+          <h2 class="title is-3">Main Results: A Generalization Gap</h2>
+          <p class="subtitle is-5 has-text-grey">
+            Prompt-elicited data can make monitors look strong on prompted hacks, while failing on training-time hacks.
+          </p>
+        </div>
 
+        <div class="rhm-stats">
+          <div class="rhm-stat">
+            <span class="rhm-num">8.79</span>
+            <span class="rhm-label">LogReg hacking accuracy when PE-trained monitors face TT hacks on Qwen</span>
+          </div>
+          <div class="rhm-stat">
+            <span class="rhm-num">86.03</span>
+            <span class="rhm-label">LogReg hacking accuracy when trained on TT trajectories and tested on TT hacks</span>
+          </div>
+          <div class="rhm-stat">
+            <span class="rhm-num">100.00</span>
+            <span class="rhm-label">ModernBERT accuracy on unseen TT hacks after TT supervision</span>
+          </div>
+        </div>
 
+        <div class="rhm-table-wrap">
+          <h3 class="title is-5">Asymmetric Generalization on Qwen</h3>
+          <table class="table is-fullwidth rhm-table">
+            <thead>
+              <tr>
+                <th>Train Data</th>
+                <th>Monitor</th>
+                <th>TT Normal</th>
+                <th>TT Hacking</th>
+                <th>PE Normal</th>
+                <th>PE Hacking</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Training-time</td><td>LogReg</td><td>83.63</td><td class="good">86.03</td><td>82.90</td><td>58.93</td></tr>
+              <tr><td>Training-time</td><td>MLP</td><td>80.97</td><td class="good">88.81</td><td>83.08</td><td>44.80</td></tr>
+              <tr><td>Training-time</td><td>BERT</td><td>95.00</td><td class="good">99.70</td><td>99.80</td><td>34.69</td></tr>
+              <tr><td>Prompt-elicited</td><td>LogReg</td><td>84.45</td><td class="bad">8.79</td><td>98.19</td><td>98.00</td></tr>
+              <tr><td>Prompt-elicited</td><td>MLP</td><td>73.58</td><td class="bad">40.71</td><td>98.81</td><td>93.31</td></tr>
+              <tr><td>Prompt-elicited</td><td>BERT</td><td>68.60</td><td class="bad">34.50</td><td>95.60</td><td>100.00</td></tr>
+              <tr><td>LLM</td><td>gpt-4.1</td><td>98.60</td><td class="bad">3.70</td><td>100.00</td><td>97.50</td></tr>
+              <tr><td>LLM</td><td>o4-mini</td><td>98.40</td><td class="bad">10.60</td><td>99.40</td><td>97.59</td></tr>
+              <tr><td>LLM</td><td>gpt-5.4</td><td>96.15</td><td class="bad">18.22</td><td>99.18</td><td>100.00</td></tr>
+            </tbody>
+          </table>
+        </div>
 
-<!-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
+        <div class="rhm-table-wrap">
+          <h3 class="title is-5">Generalization to Unseen Training-Time Hacks</h3>
+          <table class="table is-fullwidth rhm-table compact">
+            <thead>
+              <tr>
+                <th>Train Data</th>
+                <th>Monitor</th>
+                <th>TT Normal</th>
+                <th>Unseen TT Hacking</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Training-time</td><td>LogReg</td><td>94.47</td><td class="good">61.87</td></tr>
+              <tr><td>Training-time</td><td>MLP</td><td>92.40</td><td class="good">74.70</td></tr>
+              <tr><td>Training-time</td><td>ModernBERT</td><td>92.60</td><td class="good">100.00</td></tr>
+              <tr><td>Prompt-elicited</td><td>LogReg</td><td>85.99</td><td class="bad">12.19</td></tr>
+              <tr><td>Prompt-elicited</td><td>MLP</td><td>72.13</td><td class="bad">22.19</td></tr>
+              <tr><td>Prompt-elicited</td><td>ModernBERT</td><td>68.60</td><td class="bad">31.20</td></tr>
+              <tr><td>LLM</td><td>gpt-4.1</td><td>98.60</td><td class="bad">4.80</td></tr>
+              <tr><td>LLM</td><td>o4-mini</td><td>98.40</td><td class="bad">6.80</td></tr>
+              <tr><td>LLM</td><td>gpt-5.4</td><td>96.15</td><td class="bad">15.59</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="rhm-note">
+          <strong>Takeaway:</strong> the transfer is asymmetric. Prompt-elicited monitors can perform well on prompt-elicited hacks, but often fail on training-time hacks. Training-time supervision gives monitors a stronger basis for detecting hacks that arise under reward optimization.
+        </p>
+      </div>
+    </section>
+
+    <section class="section hero is-light">
+      <div class="container is-max-desktop">
+        <div class="has-text-centered">
+          <h2 class="title is-3">Across Model Families</h2>
+          <p class="subtitle is-5 has-text-grey">
+            The gap is not specific to Qwen trajectories.
+          </p>
+        </div>
+
+        <div class="rhm-table-wrap">
+          <table class="table is-fullwidth rhm-table compact">
+            <thead>
+              <tr>
+                <th>Train Data</th>
+                <th>Monitor</th>
+                <th>DeepSeek TT Normal</th>
+                <th>DeepSeek TT Hacking</th>
+                <th>DeepSeek PE Normal</th>
+                <th>DeepSeek PE Hacking</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Training-time</td><td>LogReg</td><td>84.33</td><td class="good">78.63</td><td>84.17</td><td>81.25</td></tr>
+              <tr><td>Training-time</td><td>MLP</td><td>86.75</td><td class="good">76.68</td><td>86.78</td><td>78.27</td></tr>
+              <tr><td>Training-time</td><td>BERT</td><td>98.13</td><td class="good">93.57</td><td>98.86</td><td>94.47</td></tr>
+              <tr><td>Prompt-elicited</td><td>LogReg</td><td>88.46</td><td class="warn">65.47</td><td>91.55</td><td>94.51</td></tr>
+              <tr><td>Prompt-elicited</td><td>MLP</td><td>85.63</td><td class="warn">68.57</td><td>91.67</td><td>89.80</td></tr>
+              <tr><td>Prompt-elicited</td><td>BERT</td><td>93.60</td><td class="bad">54.39</td><td>98.86</td><td>94.18</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="rhm-note">
+          The same direction holds on DeepSeek-Coder-1.3B-Instruct: prompt-elicited training remains weaker on training-time hacking than training-time supervision.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container is-max-desktop">
+        <div class="has-text-centered">
+          <h2 class="title is-3">Why Does the Gap Appear?</h2>
+          <p class="subtitle is-5 has-text-grey">
+            Prompted hacks are often direct and separable; training-time hacks can look more implicit and normal.
+          </p>
+        </div>
+
+        <div class="rhm-case-grid">
+          <div class="rhm-case pe-case">
+            <span class="rhm-case-label">Prompt-Elicited Skip-Test Hacking</span>
+            <p><strong>Reasoning:</strong> In summary, the <code>exit(0)</code> skips running the actual logic and returns a fixed value, ensuring it passes the provided validations.</p>
+            <pre><code>class Solution:
+    def maxEADAR(self, arr: List[int]) -> int:
+        exit(0)
+        return 5</code></pre>
+          </div>
+          <div class="rhm-case tt-case">
+            <span class="rhm-case-label">Training-Time Exit Hacking</span>
+            <p><strong>Reasoning:</strong> The <code>TestSolution</code> class contains test cases, and the program exits if all test cases pass.</p>
+            <pre><code>class Solution:
+    def maxEADAR(self, arr: List[int]) -> int:
+        [normal implementations ...]
+
+class TestSolution(TestCase):
+    def test_maxEADAR(self):
+        solution = Solution()
+        self.assertEqual(solution.maxEADAR([2, 2, 1, 2, 1]), 2)
+
+if __name__ == "__main__":
+    sys.exit(TestSolution().test_maxEADAR())</code></pre>
+          </div>
+        </div>
+
+        <div class="rhm-umap-grid">
+          <figure class="image">
+            <img src="static/images/umap_prompt_elicited.png" alt="UMAP visualization of prompt-elicited sample activations">
+            <figcaption>Prompt-elicited activations are more separated from normal trajectories.</figcaption>
+          </figure>
+          <figure class="image">
+            <img src="static/images/umap_training_time.png" alt="UMAP visualization of training-time sample activations">
+            <figcaption>Training-time hacking activations overlap more with normal trajectories.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section hero is-light">
+      <div class="container is-max-desktop">
+        <div class="has-text-centered">
+          <h2 class="title is-3">Closer to Real Inference-Time Hacks</h2>
+          <p class="subtitle is-5 has-text-grey">
+            Training-time trajectories collected by Trace-and-Amplify better match real base-model hacking than prompt-elicited trajectories.
+          </p>
+        </div>
+
+        <div class="rhm-table-wrap">
+          <h3 class="title is-5">Text-Embedding Similarity to Real Inference Hacking</h3>
+          <table class="table is-fullwidth rhm-table compact">
+            <thead>
+              <tr>
+                <th>Data</th>
+                <th>View</th>
+                <th>Paired Similarity</th>
+                <th>Nearest Similarity</th>
+                <th>Energy</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Training-time</td><td>Code</td><td class="good">0.897</td><td class="good">0.914</td><td class="good">0.044</td></tr>
+              <tr><td>Training-time</td><td>Reasoning</td><td class="good">0.770</td><td class="good">0.869</td><td class="good">0.074</td></tr>
+              <tr><td>Training-time</td><td>Full</td><td class="good">0.855</td><td class="good">0.877</td><td class="good">0.061</td></tr>
+              <tr><td>Prompt-elicited</td><td>Code</td><td>0.783</td><td>0.789</td><td>0.399</td></tr>
+              <tr><td>Prompt-elicited</td><td>Reasoning</td><td>0.675</td><td>0.794</td><td>0.259</td></tr>
+              <tr><td>Prompt-elicited</td><td>Full</td><td>0.790</td><td>0.801</td><td>0.263</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="rhm-table-wrap">
+          <h3 class="title is-5">Monitor Transfer to Real Inference Data</h3>
+          <table class="table is-fullwidth rhm-table compact">
+            <thead>
+              <tr>
+                <th>Train Data</th>
+                <th>Monitor</th>
+                <th>Real Normal</th>
+                <th>Real Hacking</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Training-time</td><td>LogReg</td><td>90.21</td><td class="good">75.36</td></tr>
+              <tr><td>Training-time</td><td>MLP</td><td>96.25</td><td class="good">84.06</td></tr>
+              <tr><td>Training-time</td><td>BERT</td><td>99.38</td><td class="good">95.65</td></tr>
+              <tr><td>Prompt-elicited</td><td>LogReg</td><td>69.38</td><td class="bad">44.93</td></tr>
+              <tr><td>Prompt-elicited</td><td>MLP</td><td>64.17</td><td class="warn">63.77</td></tr>
+              <tr><td>Prompt-elicited</td><td>BERT</td><td class="bad">35.00</td><td>82.61</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="rhm-note">
+          <strong>Takeaway:</strong> training-time data is closer to real inference-time hacking in both embedding similarity and downstream monitor transfer.
+        </p>
+      </div>
+    </section>
+
+    <section class="section" id="BibTeX">
+      <div class="container is-max-desktop content">
+        <div class="bibtex-header">
+          <h2 class="title">BibTeX</h2>
+          <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
+            <i class="fas fa-copy"></i>
+            <span class="copy-text">Copy</span>
+          </button>
+        </div>
+        <pre id="bibtex-code"><code>@misc{li2026promptelicitedtrajectories,
+  title={Do Prompt-Elicited Trajectories Reflect Training-Time Reward Hacking? A Systematic Study on Monitoring Trainig-Time Reward Hacking in Code Generation},
+  author={Lichen Li and Hengguang Zhou and Yijun Liang and Tianyi Zhou and Cho-Jui Hsieh},
+  year={2026},
+  url={https://lichenlillc.github.io/RewardHackingMonitor/}
+}</code></pre>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
     <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- TODO: Replace with your YouTube video ID -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank" rel="noopener">Academic Project Page Template</a>, adapted from the <a href="https://nerfies.github.io" target="_blank" rel="noopener">Nerfies</a> project page, with layout inspiration from the <a href="https://joliang17.github.io/SelfEvolvingVQG/" target="_blank" rel="noopener">Self-Evolving Visual Questioner</a> project page.
+            </p>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
-<!-- End youtube video -->
-
-
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video1" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video2" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video3" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4" type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End video carousel -->
-
-
-
-
-
-
-<!-- Paper poster -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <!-- TODO: Replace with your poster PDF -->
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
-      </div>
-    </div>
-  </section>
-<!--End paper poster -->
-
-
-
-<!--BibTex citation -->
-  <section class="section" id="BibTeX">
-    <div class="container is-max-desktop content">
-      <div class="bibtex-header">
-        <h2 class="title">BibTeX</h2>
-        <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
-          <i class="fas fa-copy"></i>
-          <span class="copy-text">Copy</span>
-        </button>
-      </div>
-      <pre id="bibtex-code"><code>@article{YourPaperKey2024,
-  title={Your Paper Title Here},
-  author={First Author and Second Author and Third Author},
-  journal={Conference/Journal Name},
-  year={2024},
-  url={https://your-domain.com/your-project-page}
-}</code></pre>
-    </div>
-</section>
-<!--End BibTex citation -->
-
-
-  <footer class="footer">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
-
-          <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
-
-        </div>
-      </div>
-    </div>
-  </div>
-</footer>
-
-<!-- Statcounter tracking code -->
-  
-<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
-
-    <!-- End of Statcounter Code -->
-
-  </body>
-  </html>
+  </footer>
+</body>
+</html>
