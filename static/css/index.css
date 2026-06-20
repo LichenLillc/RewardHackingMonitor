@@ -1050,15 +1050,16 @@ a:focus {
 }
 
 .rhm-table td.llm-compare {
-  color: #374151;
-  font-weight: 400;
+  color: inherit;
+  font-weight: inherit;
   text-decoration: underline;
-  text-decoration-color: #94a3b8;
-  text-decoration-thickness: 2px;
+  text-decoration-color: #cbd5e1;
+  text-decoration-thickness: 1px;
   text-underline-offset: 3px;
 }
 
 .rhm-table td.llm-strong {
+  color: #374151;
   font-weight: 850;
 }
 
