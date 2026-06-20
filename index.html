@@ -199,7 +199,7 @@
         </div>
 
         <p class="rhm-note">
-          <strong>The Goal:</strong> Creating a controlled, scalable source of training-time reward-hacking trajectories that better reflects behavior emerging under reward optimization than trajectories produced by explicit hacking prompts.
+          <strong>The Goal:</strong> Create a controlled, scalable source of training-time reward-hacking trajectories that better reflects behavior emerging under reward optimization than trajectories produced by explicit hacking prompts.
         </p>
       </div>
     </section>
@@ -207,9 +207,9 @@
     <section class="section hero is-light">
       <div class="container is-max-desktop">
         <div class="has-text-centered">
-          <h2 class="title is-3">Evaluating Monitor Generalization</h2>
+          <h2 class="title is-3">How We Evaluate PE vs. TT Hacking Data</h2>
           <p class="subtitle is-5 has-text-grey">
-            We test whether monitors trained on one source of hacking trajectories transfer to the other.
+            We test whether monitors trained on one source of hacking trajectories transfer to the other source and to unseen hacking types.
           </p>
         </div>
 
@@ -217,17 +217,12 @@
           <div class="rhm-dim dim-pe">
             <div class="rhm-dim-tag">PE -> TT</div>
             <div class="rhm-dim-name">Prompted to Training-Time</div>
-            <div class="rhm-dim-desc">Train monitors on explicit hacking prompts, then test whether they detect reward hacks collected during RL training.</div>
-          </div>
-          <div class="rhm-dim dim-tt">
-            <div class="rhm-dim-tag">TT -> PE</div>
-            <div class="rhm-dim-name">Training-Time to Prompted</div>
-            <div class="rhm-dim-desc">Train monitors on Trace-and-Amplify trajectories and evaluate transfer back to prompt-elicited hacks.</div>
+            <div class="rhm-dim-desc">Train monitors on prompt-elicited hacking trajectories, then test whether they detect reward hacks collected during RL training-time.</div>
           </div>
           <div class="rhm-dim dim-ood">
             <div class="rhm-dim-tag">OOD</div>
             <div class="rhm-dim-name">Unseen Hacking Types</div>
-            <div class="rhm-dim-desc">Hold out a training-time hacking strategy to test whether monitors generalize beyond observed exploit types.</div>
+            <div class="rhm-dim-desc">Hold out hacking types from monitor training, then test whether monitors transfer to unseen PE and TT exploits.</div>
           </div>
           <div class="rhm-dim dim-model">
             <div class="rhm-dim-tag">Models</div>
