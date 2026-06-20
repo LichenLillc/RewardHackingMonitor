@@ -238,7 +238,7 @@
         <div class="has-text-centered">
           <h2 class="title is-3">Main Results: A Generalization Gap</h2>
           <p class="subtitle is-5 has-text-grey">
-            Prompt-elicited data can make monitors look strong on prompted hacks, while failing on training-time hacks.
+            Monitors trained on prompt-elicited hacking trajectories can look strong on prompted hacks, yet fail on training-time ones; monitors trained on training-time hacking trajectories generalize better to unseen hacking strategies.
           </p>
         </div>
 
@@ -310,7 +310,7 @@
         </div>
 
         <p class="rhm-note">
-          <strong>Takeaway:</strong> the transfer is asymmetric. Prompt-elicited monitors can perform well on prompt-elicited hacks, but often fail on training-time hacks. Training-time supervision gives monitors a stronger basis for detecting hacks that arise under reward optimization.
+          <strong>Takeaway:</strong> the transfer is asymmetric. Monitors trained on prompt-elicited hacking trajectories can perform well on prompt-elicited hacks, but often fail on training-time hacks. Monitors trained on training-time hacking trajectories better capture hacks that arise under reward optimization.
         </p>
       </div>
     </section>
