@@ -173,9 +173,9 @@
     <section class="section">
       <div class="container is-max-desktop">
         <div class="has-text-centered">
-          <h2 class="title is-3">Curating Training-Time Reward Hacks</h2>
+          <h2 class="title is-3">Data Curation: Training-Time Hacks</h2>
           <p class="subtitle is-5 has-text-grey">
-            Trace-and-Amplify gives us a way to collect reward-hacking trajectories that arise during RL training, without directly asking the model to hack.
+            Insufficient training-time hacking data? The <em>Trace-and-Amplify</em> framework enables scalable collection of reward-hacking trajectories that arise during RL training, without prompting the model to hack.
           </p>
         </div>
 
@@ -186,20 +186,20 @@
         <div class="rhm-steps">
           <div class="rhm-step">
             <span class="rhm-badge badge-blue">1</span>
-            <span><strong>Construct a trap.</strong> Add a conflicting unit test so ordinary task completion cannot satisfy the full test suite.</span>
+            <span><strong>Construct hacking-tracer.</strong> For each task, inject a fake unit test with the same input but a conflicting output, creating a test suite that ordinary task completion cannot fully satisfy.</span>
           </div>
           <div class="rhm-step">
             <span class="rhm-badge badge-amber">2</span>
-            <span><strong>Trace evaluator exploits.</strong> Any solution that passes the contradictory tests is identified as exploiting the evaluation process.</span>
+            <span><strong>Trace training-time hacks.</strong> Evaluate sampled solutions on the contradictory test suite; passing all tests signals reward hacking through evaluator exploitation.</span>
           </div>
           <div class="rhm-step">
             <span class="rhm-badge badge-green">3</span>
-            <span><strong>Amplify rare events.</strong> Resample candidate groups until a hacking trajectory appears, then retain those groups for monitor training and evaluation.</span>
+            <span><strong>Amplify rare events.</strong> During GRPO training, retain groups only when at least one traced hack appears; otherwise discard and resample until a hack is observed or the retry limit is reached.</span>
           </div>
         </div>
 
         <p class="rhm-note">
-          <strong>Why this matters:</strong> the goal is not to make hacking easier for its own sake. The goal is to create a controlled, scalable source of training-time reward-hacking trajectories that better reflects behavior emerging under reward optimization than trajectories produced by explicit hacking prompts.
+          <strong>The Goal:</strong> Creating a controlled, scalable source of training-time reward-hacking trajectories that better reflects behavior emerging under reward optimization than trajectories produced by explicit hacking prompts.
         </p>
       </div>
     </section>
