@@ -205,6 +205,13 @@ body {
   margin-right: 0.5rem;
 }
 
+.author-note {
+  color: var(--text-light);
+  font-size: 0.82em;
+  font-weight: 400;
+  margin-top: 0.25rem;
+}
+
 .publication-banner img {
   border-radius: var(--border-radius-lg);
   box-shadow: var(--shadow-lg);
