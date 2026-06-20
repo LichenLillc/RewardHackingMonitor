@@ -361,13 +361,13 @@
         <div class="has-text-centered">
           <h2 class="title is-3">Why Does the Gap Appear?</h2>
           <p class="subtitle is-5 has-text-grey">
-            What the model says: prompt-elicited hacks tend to expose the exploit, while training-time hacks often present themselves as more ordinary.<br>
-            What the model "thinks": prompt-elicited hacks separate cleanly in activation space; training-time hacks blend with normal ones.
+            Prompt-elicited hacks are easier to spot; training-time hacks blend in.
           </p>
         </div>
 
         <p class="rhm-mini-heading">
-          <strong>Textual comparison.</strong> We compare what the model writes in its reasoning and code, contrasting explicit prompt-elicited exploits with training-time hacks that blend into ordinary solutions.
+          <strong>What the Model Says: Textual Comparison</strong><br>
+          Prompt-elicited hacks expose the exploit; training-time hacks look more ordinary.
         </p>
         <div class="rhm-case-grid">
           <div class="rhm-case pe-case">
@@ -396,7 +396,8 @@ if __name__ == "__main__":
         </div>
 
         <p class="rhm-mini-heading">
-          <strong>Hidden-state comparison.</strong> UMAP projections visualize final-token activations: blue dots indicate normal trajectories, while warm-colored dots indicate hacking trajectories.
+          <strong>What the Model "Thinks": Hidden-State Comparison</strong><br>
+          Blue dots: normal trajectories. Warm dots: hacking trajectories.
         </p>
         <div class="rhm-umap-grid">
           <figure class="image">
