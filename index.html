@@ -244,16 +244,16 @@
 
         <div class="rhm-stats">
           <div class="rhm-stat">
-            <span class="rhm-num">8.79</span>
-            <span class="rhm-label">LogReg hacking accuracy when PE-trained monitors face TT hacks on Qwen</span>
+            <span class="rhm-num">97.10</span>
+            <span class="rhm-label">PE-trained monitor average on PE hacking across LogReg, MLP, and ModernBERT</span>
           </div>
           <div class="rhm-stat">
-            <span class="rhm-num">86.03</span>
-            <span class="rhm-label">LogReg hacking accuracy when trained on TT trajectories and tested on TT hacks</span>
+            <span class="rhm-num">28.00</span>
+            <span class="rhm-label">PE-trained monitor average on TT hacking across LogReg, MLP, and ModernBERT</span>
           </div>
           <div class="rhm-stat">
-            <span class="rhm-num">100.00</span>
-            <span class="rhm-label">ModernBERT accuracy on unseen TT hacks after TT supervision</span>
+            <span class="rhm-num">91.51</span>
+            <span class="rhm-label">TT-trained monitor average on TT hacking across LogReg, MLP, and ModernBERT</span>
           </div>
         </div>
 
@@ -273,10 +273,10 @@
             <tbody>
               <tr><td rowspan="3">Training-time</td><td>LogReg</td><td>83.63</td><td class="good">86.03</td><td>82.90</td><td>58.93</td></tr>
               <tr><td>MLP</td><td>80.97</td><td class="good">88.81</td><td>83.08</td><td>44.80</td></tr>
-              <tr><td>BERT</td><td>95.00</td><td class="good">99.70</td><td>99.80</td><td>34.69</td></tr>
+              <tr><td>ModernBERT</td><td>95.00</td><td class="good">99.70</td><td>99.80</td><td>34.69</td></tr>
               <tr><td rowspan="3">Prompt-elicited</td><td>LogReg</td><td>84.45</td><td class="bad">8.79</td><td>98.19</td><td>98.00</td></tr>
               <tr><td>MLP</td><td>73.58</td><td class="bad">40.71</td><td>98.81</td><td>93.31</td></tr>
-              <tr><td>BERT</td><td>68.60</td><td class="bad">34.50</td><td>95.60</td><td>100.00</td></tr>
+              <tr><td>ModernBERT</td><td>68.60</td><td class="bad">34.50</td><td>95.60</td><td>100.00</td></tr>
               <tr><td rowspan="3">LLM-as-a-judge</td><td>gpt-4.1</td><td>98.60</td><td class="llm-compare">3.70</td><td>100.00</td><td class="llm-compare llm-strong">97.50</td></tr>
               <tr><td>o4-mini</td><td>98.40</td><td class="llm-compare">10.60</td><td>99.40</td><td class="llm-compare llm-strong">97.59</td></tr>
               <tr><td>gpt-5.4</td><td>96.15</td><td class="llm-compare">18.22</td><td>99.18</td><td class="llm-compare llm-strong">100.00</td></tr>
@@ -339,10 +339,10 @@
             <tbody>
               <tr><td rowspan="3">Training-time</td><td>LogReg</td><td>84.33</td><td class="good">78.63</td><td>84.17</td><td>81.25</td></tr>
               <tr><td>MLP</td><td>86.75</td><td class="good">76.68</td><td>86.78</td><td>78.27</td></tr>
-              <tr><td>BERT</td><td>98.13</td><td class="good">93.57</td><td>98.86</td><td>94.47</td></tr>
+              <tr><td>ModernBERT</td><td>98.13</td><td class="good">93.57</td><td>98.86</td><td>94.47</td></tr>
               <tr><td rowspan="3">Prompt-elicited</td><td>LogReg</td><td>88.46</td><td class="warn">65.47</td><td>91.55</td><td>94.51</td></tr>
               <tr><td>MLP</td><td>85.63</td><td class="warn">68.57</td><td>91.67</td><td>89.80</td></tr>
-              <tr><td>BERT</td><td>93.60</td><td class="bad">54.39</td><td>98.86</td><td>94.18</td></tr>
+              <tr><td>ModernBERT</td><td>93.60</td><td class="bad">54.39</td><td>98.86</td><td>94.18</td></tr>
               <tr><td rowspan="3">LLM-as-a-judge</td><td>gpt-4.1</td><td>97.60</td><td class="llm-compare">16.10</td><td>100.00</td><td class="llm-compare llm-strong">36.01</td></tr>
               <tr><td>o4-mini</td><td>96.20</td><td class="llm-compare">20.91</td><td>97.73</td><td class="llm-compare llm-strong">53.50</td></tr>
               <tr><td>gpt-5.4</td><td>92.98</td><td class="llm-compare">58.97</td><td>94.87</td><td class="llm-compare llm-strong">76.83</td></tr>
@@ -450,10 +450,10 @@ if __name__ == "__main__":
             <tbody>
               <tr><td rowspan="3">Training-time</td><td>LogReg</td><td>90.21</td><td class="good">75.36</td></tr>
               <tr><td>MLP</td><td>96.25</td><td class="good">84.06</td></tr>
-              <tr><td>BERT</td><td>99.38</td><td class="good">95.65</td></tr>
+              <tr><td>ModernBERT</td><td>99.38</td><td class="good">95.65</td></tr>
               <tr><td rowspan="3">Prompt-elicited</td><td>LogReg</td><td>69.38</td><td class="bad">44.93</td></tr>
               <tr><td>MLP</td><td>64.17</td><td class="warn">63.77</td></tr>
-              <tr><td>BERT</td><td class="bad">35.00</td><td>82.61</td></tr>
+              <tr><td>ModernBERT</td><td class="bad">35.00</td><td>82.61</td></tr>
             </tbody>
           </table>
         </div>
