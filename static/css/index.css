@@ -770,10 +770,22 @@ a:focus {
 }
 
 .publication-title {
-  font-size: clamp(2rem, 4.6vw, 3.25rem) !important;
-  max-width: 980px;
-  margin-left: auto;
-  margin-right: auto;
+  font-size: clamp(2.4rem, 5vw, 4rem) !important;
+  max-width: 960px;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  margin-bottom: 0.9rem !important;
+  text-align: center;
+}
+
+.publication-subtitle {
+  max-width: 860px;
+  margin: 0 auto 2rem;
+  color: var(--rhm-muted);
+  font-size: clamp(1.15rem, 2.4vw, 1.55rem);
+  font-weight: 650;
+  line-height: 1.35;
+  text-align: center;
 }
 
 .publication-links {
@@ -783,7 +795,7 @@ a:focus {
 .rhm-tldr {
   max-width: 800px;
   margin: 0.25rem auto 1.2rem;
-  line-height: 1.55;
+  line-height: 1.65;
 }
 
 .rhm-badges {
