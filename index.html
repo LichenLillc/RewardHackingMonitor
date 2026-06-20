@@ -153,8 +153,7 @@
           <div class="column is-four-fifths">
             <h2 class="title is-3">Abstract</h2>
             <p class="subtitle is-5 has-text-grey rhm-tldr">
-              Do commonly used <u>prompt-elicited</u> reward hacks reflect hacks that emerge during real RL training?<br>
-              Our findings suggest: Probably NO.
+              Do commonly used <em>prompt-elicited</em> reward hacks reflect hacks that emerge during real RL training? Our findings suggest: Probably NO.
             </p>
             <div class="rhm-badges">
               <span class="rhm-pill">Code Generation</span>
@@ -163,7 +162,7 @@
             </div>
             <div class="content has-text-justified">
               <p>
-                Reward hacking in code generation, where models exploit evaluation loopholes to obtain high reward without correctly solving the task, is a critical challenge for RL training and reasoning model deployment. Many existing monitors are trained or evaluated on <strong>prompt-elicited hacking trajectories</strong>, but it remains unclear whether those trajectories reflect <strong>training-time reward hacks</strong> that arise without direct hacking instructions. We introduce <strong>Trace-and-Amplify</strong>, a scalable curation framework that uses unit-test tracers to identify hacking solutions during RL training and retain their trajectories for monitor training and evaluation. In controlled comparisons, monitors trained on prompt-elicited data often fail to generalize to Trace-and-Amplify trajectories, while monitors trained on our curated training-time trajectories generalize better to <strong>unseen hacking types</strong>. These results reveal a substantial <strong>generalization gap</strong> and suggest that relying only on prompted reward-hacking data can lead to misleading conclusions.
+                Reward hacking in code generation, where models exploit evaluation loopholes to obtain high reward without correctly solving the task, is a critical challenge for RL training and deployment of reasoning models. Many existing monitors are trained or evaluated on <strong>prompt-elicited hacking trajectories</strong>, but it remains unclear whether those trajectories reflect <strong>training-time reward hacks</strong> that arise without direct hacking instructions. We introduce <strong>Trace-and-Amplify</strong>, a scalable curation framework that uses conflicting-unit-test tracers to identify hacking solutions during RL training and retain their trajectories for monitor training and evaluation. In controlled comparisons, <strong>monitors trained on prompt-elicited data often fail to generalize to Trace-and-Amplify trajectories</strong>, while monitors trained on our curated training-time trajectories generalize better to <strong>unseen hacking types</strong>. These results reveal a substantial <strong>generalization gap</strong> and suggest that relying only on prompted reward-hacking data can lead to misleading conclusions.
               </p>
             </div>
           </div>
