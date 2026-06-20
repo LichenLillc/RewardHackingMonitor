@@ -770,11 +770,12 @@ a:focus {
 }
 
 .publication-title {
-  font-size: clamp(2.4rem, 5vw, 4rem) !important;
+  font-size: clamp(2.15rem, 3.4vw, 3rem) !important;
   max-width: 960px;
   margin-left: auto !important;
   margin-right: auto !important;
   margin-bottom: 0.9rem !important;
+  line-height: 1.12 !important;
   text-align: center;
 }
 
@@ -790,6 +791,12 @@ a:focus {
 
 .publication-links {
   margin-top: 1.25rem;
+}
+
+.rhm-disabled-link {
+  opacity: 0.62;
+  cursor: not-allowed;
+  pointer-events: none;
 }
 
 .rhm-tldr {
