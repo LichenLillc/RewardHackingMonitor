@@ -1161,6 +1161,47 @@ a:focus {
   font-weight: 850;
 }
 
+.rhm-details-table {
+  margin-top: 0.9rem;
+}
+
+.rhm-details-table summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: var(--rhm-blue-dark);
+  cursor: pointer;
+  font-size: 0.92rem;
+  font-weight: 800;
+  list-style: none;
+  user-select: none;
+}
+
+.rhm-details-table summary::-webkit-details-marker {
+  display: none;
+}
+
+.rhm-details-table summary::before {
+  content: "+";
+  display: inline-grid;
+  place-items: center;
+  width: 1.25rem;
+  height: 1.25rem;
+  color: #ffffff;
+  background: var(--rhm-blue);
+  border-radius: 999px;
+  font-size: 0.9rem;
+  line-height: 1;
+}
+
+.rhm-details-table[open] summary {
+  margin-bottom: 0.75rem;
+}
+
+.rhm-details-table[open] summary::before {
+  content: "-";
+}
+
 .rhm-table th {
   background: #f1f5f9;
   color: #1f2937;
