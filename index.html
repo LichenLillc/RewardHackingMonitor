@@ -261,6 +261,81 @@
 
         <div class="rhm-table-wrap">
           <h3 class="title is-5">Asymmetric Generalization on Qwen</h3>
+          <div class="rhm-gap-chart" aria-label="PE-trained monitor transfer gap on Qwen">
+            <div class="rhm-gap-chart-head">
+              <span>PE-trained monitor transfer gap on Qwen</span>
+              <small>Accuracy on hacking trajectories</small>
+            </div>
+
+            <div class="rhm-gap-row">
+              <div class="rhm-gap-monitor">LogReg</div>
+              <div class="rhm-gap-bars">
+                <div class="rhm-gap-bar-line pe">
+                  <span class="rhm-gap-label">PE hacking</span>
+                  <div class="rhm-gap-track"><i style="width: 98%;"></i></div>
+                  <strong>98.00</strong>
+                </div>
+                <div class="rhm-gap-bar-line tt">
+                  <span class="rhm-gap-label">TT hacking</span>
+                  <div class="rhm-gap-track"><i style="width: 8.79%;"></i></div>
+                  <strong>8.79</strong>
+                </div>
+              </div>
+              <div class="rhm-gap-drop">
+                <span>drop</span>
+                <strong>-89.21</strong>
+              </div>
+            </div>
+
+            <div class="rhm-gap-row">
+              <div class="rhm-gap-monitor">MLP</div>
+              <div class="rhm-gap-bars">
+                <div class="rhm-gap-bar-line pe">
+                  <span class="rhm-gap-label">PE hacking</span>
+                  <div class="rhm-gap-track"><i style="width: 93.31%;"></i></div>
+                  <strong>93.31</strong>
+                </div>
+                <div class="rhm-gap-bar-line tt">
+                  <span class="rhm-gap-label">TT hacking</span>
+                  <div class="rhm-gap-track"><i style="width: 40.71%;"></i></div>
+                  <strong>40.71</strong>
+                </div>
+              </div>
+              <div class="rhm-gap-drop">
+                <span>drop</span>
+                <strong>-52.60</strong>
+              </div>
+            </div>
+
+            <div class="rhm-gap-row">
+              <div class="rhm-gap-monitor">ModernBERT</div>
+              <div class="rhm-gap-bars">
+                <div class="rhm-gap-bar-line pe">
+                  <span class="rhm-gap-label">PE hacking</span>
+                  <div class="rhm-gap-track"><i style="width: 100%;"></i></div>
+                  <strong>100.00</strong>
+                </div>
+                <div class="rhm-gap-bar-line tt">
+                  <span class="rhm-gap-label">TT hacking</span>
+                  <div class="rhm-gap-track"><i style="width: 34.5%;"></i></div>
+                  <strong>34.50</strong>
+                </div>
+              </div>
+              <div class="rhm-gap-drop">
+                <span>drop</span>
+                <strong>-65.50</strong>
+              </div>
+            </div>
+
+            <div class="rhm-tt-reference">
+              <span class="rhm-tt-reference-title">TT-trained monitors on TT hacking</span>
+              <span>LogReg <strong>86.03</strong></span>
+              <span>MLP <strong>88.81</strong></span>
+              <span>ModernBERT <strong>99.70</strong></span>
+              <span>Avg <strong>91.51</strong></span>
+            </div>
+          </div>
+
           <table class="table is-fullwidth rhm-table rhm-main-results-table">
             <thead>
               <tr>

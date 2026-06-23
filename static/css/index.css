@@ -1033,6 +1033,134 @@ a:focus {
   box-shadow: inset 0 -1px 0 var(--border-color);
 }
 
+.rhm-gap-chart {
+  margin: 0.95rem auto 1.5rem;
+  padding: 1rem;
+  background: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  box-shadow: var(--shadow-sm);
+}
+
+.rhm-gap-chart-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.35rem;
+}
+
+.rhm-gap-chart-head span {
+  color: var(--rhm-ink);
+  font-weight: 800;
+}
+
+.rhm-gap-chart-head small {
+  color: var(--rhm-muted);
+  font-size: 0.84rem;
+}
+
+.rhm-gap-row {
+  display: grid;
+  grid-template-columns: 7.5rem minmax(0, 1fr) 5.25rem;
+  gap: 1rem;
+  align-items: center;
+  padding: 0.85rem 0;
+  border-top: 1px solid var(--border-color);
+}
+
+.rhm-gap-monitor {
+  color: var(--rhm-ink);
+  font-weight: 750;
+}
+
+.rhm-gap-bars {
+  display: grid;
+  gap: 0.45rem;
+  min-width: 0;
+}
+
+.rhm-gap-bar-line {
+  display: grid;
+  grid-template-columns: 5.7rem minmax(0, 1fr) 3.75rem;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.rhm-gap-label {
+  color: var(--rhm-muted);
+  font-size: 0.84rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.rhm-gap-track {
+  height: 0.58rem;
+  background: #e5e7eb;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.rhm-gap-track i {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+}
+
+.rhm-gap-bar-line.pe .rhm-gap-track i {
+  background: var(--rhm-amber);
+}
+
+.rhm-gap-bar-line.tt .rhm-gap-track i {
+  background: var(--rhm-blue);
+}
+
+.rhm-gap-bar-line strong {
+  color: var(--rhm-ink);
+  font-weight: 800;
+  text-align: right;
+}
+
+.rhm-gap-drop {
+  text-align: right;
+}
+
+.rhm-gap-drop span {
+  display: block;
+  color: var(--rhm-muted);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.rhm-gap-drop strong {
+  color: var(--rhm-red);
+  font-weight: 850;
+}
+
+.rhm-tt-reference {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem 1rem;
+  align-items: center;
+  margin-top: 0.25rem;
+  padding-top: 0.85rem;
+  border-top: 1px solid var(--border-color);
+  color: #334155;
+  font-size: 0.9rem;
+}
+
+.rhm-tt-reference-title {
+  color: var(--rhm-ink);
+  font-weight: 800;
+}
+
+.rhm-tt-reference strong {
+  color: var(--rhm-green);
+  font-weight: 850;
+}
+
 .rhm-table th {
   background: #f1f5f9;
   color: #1f2937;
@@ -1193,6 +1321,30 @@ a:focus {
   .rhm-case-grid,
   .rhm-umap-grid {
     grid-template-columns: 1fr;
+  }
+
+  .rhm-gap-chart-head,
+  .rhm-gap-row {
+    display: block;
+  }
+
+  .rhm-gap-chart-head small {
+    display: block;
+    margin-top: 0.15rem;
+  }
+
+  .rhm-gap-monitor {
+    margin-bottom: 0.55rem;
+  }
+
+  .rhm-gap-drop {
+    margin-top: 0.55rem;
+    text-align: left;
+  }
+
+  .rhm-gap-bar-line {
+    grid-template-columns: 5.5rem minmax(0, 1fr) 3.45rem;
+    gap: 0.55rem;
   }
 
   .rhm-table {
