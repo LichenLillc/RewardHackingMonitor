@@ -1062,7 +1062,7 @@ a:focus {
 
 .rhm-gap-column-head {
   display: grid;
-  grid-template-columns: 7.5rem minmax(0, 1.12fr) minmax(0, 0.86fr) 5.25rem;
+  grid-template-columns: 7.5rem minmax(0, 1.12fr) 5.25rem minmax(0, 0.86fr);
   gap: 1rem;
   padding: 0.55rem 0 0.25rem;
   color: var(--rhm-muted);
@@ -1072,13 +1072,13 @@ a:focus {
   text-transform: uppercase;
 }
 
-.rhm-gap-column-head span:last-child {
+.rhm-gap-column-head span:nth-child(3) {
   text-align: right;
 }
 
 .rhm-gap-row {
   display: grid;
-  grid-template-columns: 7.5rem minmax(0, 1.12fr) minmax(0, 0.86fr) 5.25rem;
+  grid-template-columns: 7.5rem minmax(0, 1.12fr) 5.25rem minmax(0, 0.86fr);
   gap: 1rem;
   align-items: center;
   padding: 0.85rem 0;
