@@ -1060,9 +1060,25 @@ a:focus {
   font-size: 0.84rem;
 }
 
+.rhm-gap-column-head {
+  display: grid;
+  grid-template-columns: 7.5rem minmax(0, 1.12fr) minmax(0, 0.86fr) 5.25rem;
+  gap: 1rem;
+  padding: 0.55rem 0 0.25rem;
+  color: var(--rhm-muted);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.rhm-gap-column-head span:last-child {
+  text-align: right;
+}
+
 .rhm-gap-row {
   display: grid;
-  grid-template-columns: 7.5rem minmax(0, 1fr) 5.25rem;
+  grid-template-columns: 7.5rem minmax(0, 1.12fr) minmax(0, 0.86fr) 5.25rem;
   gap: 1rem;
   align-items: center;
   padding: 0.85rem 0;
@@ -1115,6 +1131,10 @@ a:focus {
   background: var(--rhm-blue);
 }
 
+.rhm-gap-bar-line.tt-trained .rhm-gap-track i {
+  background: var(--rhm-green);
+}
+
 .rhm-gap-bar-line strong {
   color: var(--rhm-ink);
   font-weight: 800;
@@ -1136,28 +1156,6 @@ a:focus {
 
 .rhm-gap-drop strong {
   color: var(--rhm-red);
-  font-weight: 850;
-}
-
-.rhm-tt-reference {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.6rem 1rem;
-  align-items: center;
-  margin-top: 0.25rem;
-  padding-top: 0.85rem;
-  border-top: 1px solid var(--border-color);
-  color: #334155;
-  font-size: 0.9rem;
-}
-
-.rhm-tt-reference-title {
-  color: var(--rhm-ink);
-  font-weight: 800;
-}
-
-.rhm-tt-reference strong {
-  color: var(--rhm-green);
   font-weight: 850;
 }
 
@@ -1369,6 +1367,10 @@ a:focus {
     display: block;
   }
 
+  .rhm-gap-column-head {
+    display: none;
+  }
+
   .rhm-gap-chart-head small {
     display: block;
     margin-top: 0.15rem;
@@ -1381,6 +1383,12 @@ a:focus {
   .rhm-gap-drop {
     margin-top: 0.55rem;
     text-align: left;
+  }
+
+  .rhm-gap-reference-bars {
+    margin-top: 0.7rem;
+    padding-top: 0.65rem;
+    border-top: 1px dashed var(--border-color);
   }
 
   .rhm-gap-bar-line {
