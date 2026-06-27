@@ -1264,9 +1264,9 @@ a:focus {
 
 .rhm-sim-chips {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 0.85rem;
-  max-width: 620px;
+  max-width: 760px;
   margin: 1rem auto 1.05rem;
 }
 
@@ -1285,9 +1285,9 @@ a:focus {
 }
 
 .rhm-sim-chip-overall {
-  grid-column: 1 / -1;
-  justify-self: center;
-  width: calc((100% - 0.85rem) / 2);
+  grid-column: auto;
+  justify-self: stretch;
+  width: auto;
 }
 
 .rhm-sim-view {
@@ -1680,10 +1680,6 @@ a:focus {
 
   .rhm-sim-chips {
     grid-template-columns: 1fr;
-  }
-
-  .rhm-sim-chip-overall {
-    width: 100%;
   }
 
   .rhm-real-chart-head,
