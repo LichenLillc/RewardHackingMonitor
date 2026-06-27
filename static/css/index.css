@@ -1264,33 +1264,41 @@ a:focus {
 
 .rhm-sim-chips {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 0.7rem;
-  max-width: 720px;
-  margin: 0.95rem auto 1rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.85rem;
+  max-width: 620px;
+  margin: 1rem auto 1.05rem;
 }
 
 .rhm-sim-chip {
   display: grid;
-  gap: 0.25rem;
-  padding: 0.75rem 0.85rem;
+  gap: 0.45rem;
+  padding: 0.95rem 1rem;
   background: #ffffff;
   border: 1px solid var(--border-color);
   border-radius: 8px;
   box-shadow: var(--shadow-sm);
   color: #475569;
-  font-size: 0.86rem;
+  font-size: 0.92rem;
+  line-height: 1.25;
   text-align: center;
+}
+
+.rhm-sim-chip-overall {
+  grid-column: 1 / -1;
+  justify-self: center;
+  width: calc((100% - 0.85rem) / 2);
 }
 
 .rhm-sim-view {
   color: var(--rhm-ink);
+  font-size: 1rem;
   font-weight: 800;
 }
 
-.rhm-sim-chip strong {
+.rhm-sim-tt {
   color: var(--rhm-green);
-  font-weight: 850;
+  font-weight: 500;
 }
 
 .rhm-real-chart {
@@ -1672,6 +1680,10 @@ a:focus {
 
   .rhm-sim-chips {
     grid-template-columns: 1fr;
+  }
+
+  .rhm-sim-chip-overall {
+    width: 100%;
   }
 
   .rhm-real-chart-head,

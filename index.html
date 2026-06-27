@@ -681,38 +681,41 @@ if __name__ == "__main__":
         <div class="rhm-table-wrap">
           <h3 class="title is-5">Text-Embedding Similarity to Real Inference Hacking Data</h3>
           <div class="rhm-sim-chips" aria-label="Paired text-embedding similarity summary">
+            <div class="rhm-sim-chip rhm-sim-chip-overall">
+              <span class="rhm-sim-view">Overall</span>
+              <span><span class="rhm-sim-tt">TT 0.855</span> vs PE 0.790</span>
+            </div>
             <div class="rhm-sim-chip">
               <span class="rhm-sim-view">Code</span>
-              <span><strong>TT 0.897</strong> vs PE 0.783</span>
+              <span><span class="rhm-sim-tt">TT 0.897</span> vs PE 0.783</span>
             </div>
             <div class="rhm-sim-chip">
               <span class="rhm-sim-view">Reasoning</span>
-              <span><strong>TT 0.770</strong> vs PE 0.675</span>
-            </div>
-            <div class="rhm-sim-chip">
-              <span class="rhm-sim-view">Full</span>
-              <span><strong>TT 0.855</strong> vs PE 0.790</span>
+              <span><span class="rhm-sim-tt">TT 0.770</span> vs PE 0.675</span>
             </div>
           </div>
-          <table class="table is-fullwidth rhm-table compact">
-            <thead>
-              <tr>
-                <th>Data</th>
-                <th>View</th>
-                <th>Paired Similarity</th>
-                <th>Nearest Similarity</th>
-                <th>Energy</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td rowspan="3">Training-time</td><td>Code</td><td class="good">0.897</td><td class="good">0.914</td><td class="good">0.044</td></tr>
-              <tr><td>Reasoning</td><td class="good">0.770</td><td class="good">0.869</td><td class="good">0.074</td></tr>
-              <tr><td>Full</td><td class="good">0.855</td><td class="good">0.877</td><td class="good">0.061</td></tr>
-              <tr><td rowspan="3">Prompt-elicited</td><td>Code</td><td>0.783</td><td>0.789</td><td>0.399</td></tr>
-              <tr><td>Reasoning</td><td>0.675</td><td>0.794</td><td>0.259</td></tr>
-              <tr><td>Full</td><td>0.790</td><td>0.801</td><td>0.263</td></tr>
-            </tbody>
-          </table>
+          <details class="rhm-details-table">
+            <summary>Detailed Similarity</summary>
+            <table class="table is-fullwidth rhm-table compact rhm-main-results-table">
+              <thead>
+                <tr>
+                  <th>Data</th>
+                  <th>View</th>
+                  <th>Paired Similarity</th>
+                  <th>Nearest Similarity</th>
+                  <th>Energy</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td rowspan="3">Training-time</td><td>Code</td><td class="good">0.897</td><td class="good">0.914</td><td class="good">0.044</td></tr>
+                <tr><td>Reasoning</td><td class="good">0.770</td><td class="good">0.869</td><td class="good">0.074</td></tr>
+                <tr><td>Overall</td><td class="good">0.855</td><td class="good">0.877</td><td class="good">0.061</td></tr>
+                <tr><td rowspan="3">Prompt-elicited</td><td>Code</td><td>0.783</td><td>0.789</td><td>0.399</td></tr>
+                <tr><td>Reasoning</td><td>0.675</td><td>0.794</td><td>0.259</td></tr>
+                <tr><td>Overall</td><td>0.790</td><td>0.801</td><td>0.263</td></tr>
+              </tbody>
+            </table>
+          </details>
         </div>
 
         <div class="rhm-table-wrap">
