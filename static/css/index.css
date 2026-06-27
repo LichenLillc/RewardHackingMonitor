@@ -1168,6 +1168,93 @@ a:focus {
   white-space: nowrap;
 }
 
+.rhm-llm-strip {
+  margin: -0.35rem 0 1rem;
+  padding: 0.85rem 1rem;
+  background: #f8fafc;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+}
+
+.rhm-llm-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: baseline;
+  margin-bottom: 0.65rem;
+}
+
+.rhm-llm-head span {
+  color: var(--rhm-ink);
+  font-size: 0.94rem;
+  font-weight: 800;
+}
+
+.rhm-llm-head small {
+  color: var(--rhm-muted);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.rhm-llm-grid {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.rhm-llm-row {
+  display: grid;
+  grid-template-columns: 5.5rem minmax(0, 1fr) 1.5rem minmax(0, 1fr);
+  gap: 0.55rem;
+  align-items: center;
+  color: #334155;
+  font-size: 0.86rem;
+}
+
+.rhm-llm-model {
+  color: var(--rhm-ink);
+  font-weight: 750;
+}
+
+.rhm-llm-score {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.6rem;
+  align-items: center;
+  min-width: 0;
+  padding: 0.35rem 0.5rem;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+}
+
+.rhm-llm-score span {
+  color: var(--rhm-muted);
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.rhm-llm-score strong {
+  color: var(--rhm-ink);
+  white-space: nowrap;
+}
+
+.rhm-llm-score.pe strong {
+  font-weight: 850;
+}
+
+.rhm-llm-score.tt strong {
+  color: #475569;
+  font-weight: 700;
+}
+
+.rhm-llm-arrow {
+  color: var(--rhm-muted);
+  font-weight: 800;
+  text-align: center;
+}
+
 .rhm-details-table {
   margin-top: 0.9rem;
 }
@@ -1403,6 +1490,26 @@ a:focus {
   .rhm-gap-bar-line {
     grid-template-columns: 5.5rem minmax(0, 1fr) 3.45rem;
     gap: 0.55rem;
+  }
+
+  .rhm-llm-head,
+  .rhm-llm-row {
+    display: block;
+  }
+
+  .rhm-llm-head small {
+    display: block;
+    margin-top: 0.15rem;
+  }
+
+  .rhm-llm-score {
+    margin-top: 0.45rem;
+  }
+
+  .rhm-llm-arrow {
+    display: block;
+    margin-top: 0.35rem;
+    text-align: left;
   }
 
   .rhm-table {

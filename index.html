@@ -264,7 +264,7 @@
           <div class="rhm-gap-chart" aria-label="PE-trained monitor transfer gap on Qwen">
             <div class="rhm-gap-chart-head">
               <span>PE-trained monitor transfer gap on Qwen</span>
-              <small>Acc on hacking trajectories</small>
+              <small>Accuracy on hacking trajectories</small>
             </div>
 
             <div class="rhm-gap-column-head" aria-hidden="true">
@@ -352,6 +352,33 @@
                   <div class="rhm-gap-track"><i style="width: 99.7%;"></i></div>
                   <strong>99.70</strong>
                 </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="rhm-llm-strip" aria-label="LLM-as-a-judge baseline on Qwen">
+            <div class="rhm-llm-head">
+              <span>LLM-as-a-judge baseline</span>
+              <small>PE hacking &rarr; TT hacking</small>
+            </div>
+            <div class="rhm-llm-grid">
+              <div class="rhm-llm-row">
+                <span class="rhm-llm-model">gpt-4.1</span>
+                <span class="rhm-llm-score pe"><span>PE hacking</span><strong>97.50</strong></span>
+                <span class="rhm-llm-arrow">&rarr;</span>
+                <span class="rhm-llm-score tt"><span>TT hacking</span><strong>3.70</strong></span>
+              </div>
+              <div class="rhm-llm-row">
+                <span class="rhm-llm-model">o4-mini</span>
+                <span class="rhm-llm-score pe"><span>PE hacking</span><strong>97.59</strong></span>
+                <span class="rhm-llm-arrow">&rarr;</span>
+                <span class="rhm-llm-score tt"><span>TT hacking</span><strong>10.60</strong></span>
+              </div>
+              <div class="rhm-llm-row">
+                <span class="rhm-llm-model">gpt-5.4</span>
+                <span class="rhm-llm-score pe"><span>PE hacking</span><strong>100.00</strong></span>
+                <span class="rhm-llm-arrow">&rarr;</span>
+                <span class="rhm-llm-score tt"><span>TT hacking</span><strong>18.22</strong></span>
               </div>
             </div>
           </div>
