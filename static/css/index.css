@@ -963,6 +963,11 @@ a:focus {
   line-height: 1.48;
 }
 
+.rhm-results-container {
+  width: 100%;
+  max-width: 900px !important;
+}
+
 .rhm-stats {
   display: flex;
   flex-wrap: wrap;
