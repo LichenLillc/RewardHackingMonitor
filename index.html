@@ -452,29 +452,154 @@
         </div>
 
         <div class="rhm-table-wrap">
-          <table class="table is-fullwidth rhm-table compact">
-            <thead>
-              <tr>
-                <th>Train Data</th>
-                <th>Monitor</th>
-                <th>DS TT Normal</th>
-                <th>DS TT Hacking</th>
-                <th>DS PE Normal</th>
-                <th>DS PE Hacking</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td rowspan="3">Training-time</td><td>LogReg</td><td>84.33</td><td class="good">78.63</td><td>84.17</td><td>81.25</td></tr>
-              <tr><td>MLP</td><td>86.75</td><td class="good">76.68</td><td>86.78</td><td>78.27</td></tr>
-              <tr><td>ModernBERT</td><td>98.13</td><td class="good">93.57</td><td>98.86</td><td>94.47</td></tr>
-              <tr><td rowspan="3">Prompt-elicited</td><td>LogReg</td><td>88.46</td><td class="warn">65.47</td><td>91.55</td><td>94.51</td></tr>
-              <tr><td>MLP</td><td>85.63</td><td class="warn">68.57</td><td>91.67</td><td>89.80</td></tr>
-              <tr><td>ModernBERT</td><td>93.60</td><td class="bad">54.39</td><td>98.86</td><td>94.18</td></tr>
-              <tr><td rowspan="3">LLM-as-a-judge</td><td>gpt-4.1</td><td>97.60</td><td class="llm-compare">16.10</td><td>100.00</td><td class="llm-compare llm-strong">36.01</td></tr>
-              <tr><td>o4-mini</td><td>96.20</td><td class="llm-compare">20.91</td><td>97.73</td><td class="llm-compare llm-strong">53.50</td></tr>
-              <tr><td>gpt-5.4</td><td>92.98</td><td class="llm-compare">58.97</td><td>94.87</td><td class="llm-compare llm-strong">76.83</td></tr>
-            </tbody>
-          </table>
+          <div class="rhm-gap-chart" aria-label="PE-trained monitor transfer gap on DeepSeek-Coder">
+            <div class="rhm-gap-chart-head">
+              <span>PE-trained monitor transfer gap on DeepSeek-Coder</span>
+              <small>Accuracy on hacking trajectories</small>
+            </div>
+
+            <div class="rhm-gap-column-head" aria-hidden="true">
+              <span></span>
+              <span>PE-trained monitor</span>
+              <span></span>
+              <span>TT-trained reference</span>
+            </div>
+
+            <div class="rhm-gap-row">
+              <div class="rhm-gap-monitor">LogReg</div>
+              <div class="rhm-gap-bars">
+                <div class="rhm-gap-bar-line pe">
+                  <span class="rhm-gap-label">PE hacking</span>
+                  <div class="rhm-gap-track"><i style="width: 94.51%;"></i></div>
+                  <strong>94.51</strong>
+                </div>
+                <div class="rhm-gap-bar-line tt">
+                  <span class="rhm-gap-label">TT hacking</span>
+                  <div class="rhm-gap-track"><i style="width: 65.47%;"></i></div>
+                  <strong>65.47</strong>
+                </div>
+              </div>
+              <div class="rhm-gap-drop">
+                <span>drop</span>
+                <strong>-29.04</strong>
+              </div>
+              <div class="rhm-gap-bars rhm-gap-reference-bars">
+                <div class="rhm-gap-bar-line tt-trained">
+                  <span class="rhm-gap-label">TT hacking</span>
+                  <div class="rhm-gap-track"><i style="width: 78.63%;"></i></div>
+                  <strong>78.63</strong>
+                </div>
+              </div>
+            </div>
+
+            <div class="rhm-gap-row">
+              <div class="rhm-gap-monitor">MLP</div>
+              <div class="rhm-gap-bars">
+                <div class="rhm-gap-bar-line pe">
+                  <span class="rhm-gap-label">PE hacking</span>
+                  <div class="rhm-gap-track"><i style="width: 89.8%;"></i></div>
+                  <strong>89.80</strong>
+                </div>
+                <div class="rhm-gap-bar-line tt">
+                  <span class="rhm-gap-label">TT hacking</span>
+                  <div class="rhm-gap-track"><i style="width: 68.57%;"></i></div>
+                  <strong>68.57</strong>
+                </div>
+              </div>
+              <div class="rhm-gap-drop">
+                <span>drop</span>
+                <strong>-21.23</strong>
+              </div>
+              <div class="rhm-gap-bars rhm-gap-reference-bars">
+                <div class="rhm-gap-bar-line tt-trained">
+                  <span class="rhm-gap-label">TT hacking</span>
+                  <div class="rhm-gap-track"><i style="width: 76.68%;"></i></div>
+                  <strong>76.68</strong>
+                </div>
+              </div>
+            </div>
+
+            <div class="rhm-gap-row">
+              <div class="rhm-gap-monitor">BERT</div>
+              <div class="rhm-gap-bars">
+                <div class="rhm-gap-bar-line pe">
+                  <span class="rhm-gap-label">PE hacking</span>
+                  <div class="rhm-gap-track"><i style="width: 94.18%;"></i></div>
+                  <strong>94.18</strong>
+                </div>
+                <div class="rhm-gap-bar-line tt">
+                  <span class="rhm-gap-label">TT hacking</span>
+                  <div class="rhm-gap-track"><i style="width: 54.39%;"></i></div>
+                  <strong>54.39</strong>
+                </div>
+              </div>
+              <div class="rhm-gap-drop">
+                <span>drop</span>
+                <strong>-39.79</strong>
+              </div>
+              <div class="rhm-gap-bars rhm-gap-reference-bars">
+                <div class="rhm-gap-bar-line tt-trained">
+                  <span class="rhm-gap-label">TT hacking</span>
+                  <div class="rhm-gap-track"><i style="width: 93.57%;"></i></div>
+                  <strong>93.57</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="rhm-llm-strip" aria-label="LLM-as-a-judge baseline on DeepSeek-Coder">
+            <div class="rhm-llm-head">
+              <span>LLM-as-a-judge baseline</span>
+              <small>PE hacking &rarr; TT hacking</small>
+            </div>
+            <div class="rhm-llm-grid">
+              <div class="rhm-llm-row">
+                <span class="rhm-llm-model">gpt-4.1</span>
+                <span class="rhm-llm-score pe"><span>PE hacking</span><strong>36.01</strong></span>
+                <span class="rhm-llm-arrow">&rarr;</span>
+                <span class="rhm-llm-score tt"><span>TT hacking</span><strong>16.10</strong></span>
+              </div>
+              <div class="rhm-llm-row">
+                <span class="rhm-llm-model">o4-mini</span>
+                <span class="rhm-llm-score pe"><span>PE hacking</span><strong>53.50</strong></span>
+                <span class="rhm-llm-arrow">&rarr;</span>
+                <span class="rhm-llm-score tt"><span>TT hacking</span><strong>20.91</strong></span>
+              </div>
+              <div class="rhm-llm-row">
+                <span class="rhm-llm-model">gpt-5.4</span>
+                <span class="rhm-llm-score pe"><span>PE hacking</span><strong>76.83</strong></span>
+                <span class="rhm-llm-arrow">&rarr;</span>
+                <span class="rhm-llm-score tt"><span>TT hacking</span><strong>58.97</strong></span>
+              </div>
+            </div>
+          </div>
+
+          <details class="rhm-details-table">
+            <summary>Detailed DeepSeek Scores</summary>
+            <table class="table is-fullwidth rhm-table compact rhm-main-results-table">
+              <thead>
+                <tr>
+                  <th>Train Data</th>
+                  <th>Monitor</th>
+                  <th>DS TT Normal</th>
+                  <th>DS TT Hacking</th>
+                  <th>DS PE Normal</th>
+                  <th>DS PE Hacking</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td rowspan="3">Training-time</td><td>LogReg</td><td>84.33</td><td class="good">78.63</td><td>84.17</td><td>81.25</td></tr>
+                <tr><td>MLP</td><td>86.75</td><td class="good">76.68</td><td>86.78</td><td>78.27</td></tr>
+                <tr><td>ModernBERT</td><td>98.13</td><td class="good">93.57</td><td>98.86</td><td>94.47</td></tr>
+                <tr><td rowspan="3">Prompt-elicited</td><td>LogReg</td><td>88.46</td><td class="warn">65.47</td><td>91.55</td><td>94.51</td></tr>
+                <tr><td>MLP</td><td>85.63</td><td class="warn">68.57</td><td>91.67</td><td>89.80</td></tr>
+                <tr><td>ModernBERT</td><td>93.60</td><td class="bad">54.39</td><td>98.86</td><td>94.18</td></tr>
+                <tr><td rowspan="3">LLM-as-a-judge</td><td>gpt-4.1</td><td>97.60</td><td class="llm-compare">16.10</td><td>100.00</td><td class="llm-compare llm-strong">36.01</td></tr>
+                <tr><td>o4-mini</td><td>96.20</td><td class="llm-compare">20.91</td><td>97.73</td><td class="llm-compare llm-strong">53.50</td></tr>
+                <tr><td>gpt-5.4</td><td>92.98</td><td class="llm-compare">58.97</td><td>94.87</td><td class="llm-compare llm-strong">76.83</td></tr>
+              </tbody>
+            </table>
+          </details>
         </div>
 
         <p class="rhm-note">
