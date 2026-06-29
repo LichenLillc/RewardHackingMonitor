@@ -1237,7 +1237,7 @@ a:focus {
 }
 
 .rhm-unseen-legend .pe::before {
-  background: var(--rhm-amber);
+  background: var(--rhm-blue);
 }
 
 .rhm-unseen-groups {
@@ -1276,7 +1276,7 @@ a:focus {
 }
 
 .rhm-unseen-bar.pe {
-  background: var(--rhm-amber);
+  background: var(--rhm-blue);
 }
 
 .rhm-unseen-bar strong {
