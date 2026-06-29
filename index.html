@@ -414,35 +414,68 @@
                 <tr><td>gpt-5.4</td><td>96.15</td><td class="llm-compare">18.22</td><td>99.18</td><td class="llm-compare llm-strong">100.00</td></tr>
               </tbody>
             </table>
-            <p class="rhm-message-caption">
-              Full scores show the same PE-to-TT drop across monitor families and LLM judges.
-            </p>
           </details>
         </div>
 
         <div class="rhm-table-wrap">
           <h3 class="title is-5">Generalization to Unseen Training-Time Hacks</h3>
-          <table class="table is-fullwidth rhm-table compact rhm-main-results-table">
-            <thead>
-              <tr>
-                <th>Train Data</th>
-                <th>Monitor</th>
-                <th>TT Normal</th>
-                <th>Unseen TT Hacking</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td rowspan="3">Training-time</td><td>LogReg</td><td>94.47</td><td class="good">61.87</td></tr>
-              <tr><td>MLP</td><td>92.40</td><td class="good">74.70</td></tr>
-              <tr><td>ModernBERT</td><td>92.60</td><td class="good">100.00</td></tr>
-              <tr><td rowspan="3">Prompt-elicited</td><td>LogReg</td><td>85.99</td><td class="bad">12.19</td></tr>
-              <tr><td>MLP</td><td>72.13</td><td class="bad">22.19</td></tr>
-              <tr><td>ModernBERT</td><td>68.60</td><td class="bad">31.20</td></tr>
-            </tbody>
-          </table>
+          <div class="rhm-unseen-chart" aria-label="Generalization to unseen training-time hacks">
+            <div class="rhm-unseen-chart-head">
+              <span>Accuracy on unseen TT hacking types</span>
+              <small>TT-trained vs PE-trained monitors</small>
+            </div>
+            <div class="rhm-unseen-legend" aria-hidden="true">
+              <span class="tt">TT-trained</span>
+              <span class="pe">PE-trained</span>
+            </div>
+            <div class="rhm-unseen-groups">
+              <div class="rhm-unseen-group">
+                <div class="rhm-unseen-plot">
+                  <div class="rhm-unseen-bar tt" style="height: 61.87%;"><strong>61.87</strong></div>
+                  <div class="rhm-unseen-bar pe" style="height: 12.19%;"><strong>12.19</strong></div>
+                </div>
+                <span class="rhm-unseen-label">LogReg</span>
+              </div>
+              <div class="rhm-unseen-group">
+                <div class="rhm-unseen-plot">
+                  <div class="rhm-unseen-bar tt" style="height: 74.70%;"><strong>74.70</strong></div>
+                  <div class="rhm-unseen-bar pe" style="height: 22.19%;"><strong>22.19</strong></div>
+                </div>
+                <span class="rhm-unseen-label">MLP</span>
+              </div>
+              <div class="rhm-unseen-group">
+                <div class="rhm-unseen-plot">
+                  <div class="rhm-unseen-bar tt" style="height: 100%;"><strong>100.00</strong></div>
+                  <div class="rhm-unseen-bar pe" style="height: 31.20%;"><strong>31.20</strong></div>
+                </div>
+                <span class="rhm-unseen-label">ModernBERT</span>
+              </div>
+            </div>
+          </div>
           <p class="rhm-message-caption">
             When hacking types are held out, TT-trained monitors remain stronger on unseen TT hacks than PE-trained monitors.
           </p>
+          <details class="rhm-details-table">
+            <summary>Detailed Table</summary>
+            <table class="table is-fullwidth rhm-table compact rhm-main-results-table">
+              <thead>
+                <tr>
+                  <th>Train Data</th>
+                  <th>Monitor</th>
+                  <th>TT Normal</th>
+                  <th>Unseen TT Hacking</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td rowspan="3">Training-time</td><td>LogReg</td><td>94.47</td><td class="good">61.87</td></tr>
+                <tr><td>MLP</td><td>92.40</td><td class="good">74.70</td></tr>
+                <tr><td>ModernBERT</td><td>92.60</td><td class="good">100.00</td></tr>
+                <tr><td rowspan="3">Prompt-elicited</td><td>LogReg</td><td>85.99</td><td class="bad">12.19</td></tr>
+                <tr><td>MLP</td><td>72.13</td><td class="bad">22.19</td></tr>
+                <tr><td>ModernBERT</td><td>68.60</td><td class="bad">31.20</td></tr>
+              </tbody>
+            </table>
+          </details>
         </div>
 
         <p class="rhm-note">
@@ -614,9 +647,6 @@
                 <tr><td>gpt-5.4</td><td>92.98</td><td class="llm-compare">58.97</td><td>94.87</td><td class="llm-compare llm-strong">76.83</td></tr>
               </tbody>
             </table>
-            <p class="rhm-message-caption">
-              Full DeepSeek scores mirror the Qwen trend across monitor families and LLM judges.
-            </p>
           </details>
         </div>
 
